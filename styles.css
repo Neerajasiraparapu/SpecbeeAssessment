@@ -1,0 +1,211 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.event-speakers {
+    text-align: center;
+    padding: 20px;
+}
+
+/* Title and Subtitle */
+.event-speakers__heading {
+    font-size: 25px;
+    margin-bottom: 10px;
+}
+
+.event-speakers__subtext {
+    font-size: 18px;
+    color: #878282;
+    margin-bottom: 20px;
+}
+
+/* Link styling */
+.event-speakers__company-link {
+    color: #3d82cc;
+    text-decoration: none;
+}
+
+/* Carousel Container */
+.event-speakers__carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    max-width: 100%;
+    width: 100%;
+    margin-top: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+/* Carousel Buttons (Left and Right) */
+.event-speakers__carousel-btn {
+    background-color: #3d82cc;
+    color: white;
+    border: none;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 10px;
+    font-size: 24px;
+    cursor: pointer;
+    position: relative;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+    z-index: 1;
+}
+
+.event-speakers__carousel-btn:hover {
+    background-color: #3d82cc;
+}
+
+.event-speakers__carousel-btn--prev {
+    left: 10px;
+}
+
+.event-speakers__carousel-btn--next {
+    right: 10px;
+}
+
+/* Card Container */
+.event-speakers__carousel-content {
+    display: flex;
+    margin-left: 5%;
+    width: 100%;
+    gap: 20px;
+    padding: 20px 0;
+    overflow: hidden;
+}
+
+/* Profile Card */
+.event-speakers__profile-card {
+    background: #f1f0f0d3;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 230px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-speakers__profile-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Profile Card Image */
+.event-speakers__profile-img, .event-speakers__info-img {
+    width: 100px;
+    height: 100px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+/* Profile Card Name, Role, and Organization */
+.event-speakers__profile-name {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.event-speakers__profile-title,
+.event-speakers__profile-company {
+    font-size: 14px;
+    color: #878282;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .event-speakers__carousel-btn {
+        padding: 8px;
+        font-size: 18px;
+    }
+
+    .event-speakers__carousel-content {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .event-speakers__profile-card {
+        width: 180px;
+    }
+}
+
+@media (max-width: 480px) {
+    .event-speakers__profile-card {
+        width: 150px;
+    }
+
+    .event-speakers__heading {
+        font-size: 20px;
+    }
+
+    .event-speakers__subtext {
+        font-size: 14px;
+    }
+}
+
+.event-speakers__schedule-btn {
+    background-color: #3d82cc;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+    color: white;
+    padding: 10px 20px;
+    
+}
+
+.event-speakers__schedule-btn:hover {
+    background-color: #3d82cc;
+}
+
+/* Info Close Button */
+.event-speakers__info-close {
+    position: absolute;
+    background: none;
+    border: none;
+    font-size: 24px;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: #878282;
+    z-index: 2;
+}
+
+/* Info Section */
+.event-speakers__info {
+    display: none;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: left;
+    position: relative;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.event-speakers__info-main {
+    margin: 15px;
+    width: 200px;
+    text-overflow: clip;
+    border-right: 1px solid #878282;
+}
+
+.event-speakers__info-extra {
+    margin: 15px;
+    width: 550px;
+    text-overflow: clip;
+}
